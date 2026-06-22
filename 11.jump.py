@@ -1,20 +1,22 @@
-print("โปรแกรมช่วยคำนวณคะแนนรวม") 
+print("โปรแกรมคำนวนคะแนนรวม")
 
-point1 = int(input("กรอกคะแนนวิชาที่1: ")) 
+Biology = int(input("กรอกคะแนนวิชาชีวะ \n"))
+chemical = int(input("กรอกคะแนนวิชาเคมี \n"))
+math = int(input("กรอกคะแนนวิชาคณิตศาสตร์ \n"))
 
-point2 = int(input("กรอกคะแนนวิชาที่2: ")) 
+Total_score = Biology + chemical + math
+averag =  (Biology + chemical + math)/3
 
-point3 = int(input("กรอกคะแนนวิชาที่3: ")) 
+print("คะแนนรวม ; ",Total_score, )
 
-total_point = point1 + point2 + point3 
+print("คะแนนเฉลี่ย ; ",averag, )
 
-print("คะแนนรวมของคุณคือ:", total_point) 
-
-if total_point >= 80 : 
-    print("ระดับคะแนน: ดีเยี่ยม") 
-
-elif total_point >= 60 : 
-    print("ระดับคะแนน: ผ่าน") 
-    
-else: 
-    print("ระดับคะแนน: ควรปรับปรุง")
+if averag <60:
+    print("คะแนนรวมของคุณคือ" , averag)
+    print("ควรปรับปรุง")
+elif averag <80:
+    print("คะแนนรวมของคุณคือ" , averag)
+    print("ผ่าน")
+else:
+    print("คะแนนของคุณคือ" , averag)
+    print("ดีเยี่ยม")
