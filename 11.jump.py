@@ -1,22 +1,18 @@
-print("โปรแกรมคำนวนคะแนนรวม")
+print("โปรแกรมเกมทายเลข")
 
-Biology = int(input("กรอกคะแนนวิชาชีวะ \n"))
-chemical = int(input("กรอกคะแนนวิชาเคมี \n"))
-math = int(input("กรอกคะแนนวิชาคณิตศาสตร์ \n"))
+import random
 
-Total_score = Biology + chemical + math
-averag =  (Biology + chemical + math)/3
+target = random.randint(1, 100)
+attempts = 0
 
-print("คะแนนรวม ; ",Total_score, )
+while True:
+    guess = int(input("เดาตัวเลขระหว่าง 1-100: "))
+    attempts += 1
 
-print("คะแนนเฉลี่ย ; ",averag, )
-
-if averag <60:
-    print("คะแนนรวมของคุณคือ" , averag)
-    print("ควรปรับปรุง")
-elif averag <80:
-    print("คะแนนรวมของคุณคือ" , averag)
-    print("ผ่าน")
-else:
-    print("คะแนนของคุณคือ" , averag)
-    print("ดีเยี่ยม")
+    if guess > target:
+        print("มากไปหน่อย")
+    elif guess < target:
+        print("น้อยไปหน่อย") 
+    else:
+        print(f"ถูกต้อง! คุณใช้โอกาส {attempts} ครั้ง")
+        break
